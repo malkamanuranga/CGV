@@ -1,32 +1,68 @@
-# CGV – Computer Graphics and Visualization
+# Computer Graphics and Visualization (CS402.3) – Coursework 2025-2026
 
-Welcome to our collaborative repository for the **Computer Graphics and Visualization (CGV)** assignment. This repository documents our collective efforts, resources, and implementations related to the courseWORK project.
+## Rock-Paper-Scissors Gesture Recognition Game
 
-## Purpose
+This is a collaborative group project submitted as part of the coursework for **CS402.3 – Computer Graphics and Visualization**, conducted by **Dr. Rasika Ranaweera** at NSBM Green University. This repository contains the prototype and development files for a computer vision-based Rock-Paper-Scissors game with real-time gesture recognition.
 
-This project serves as a unified space for:
+- 📧 Module Leader: [ranaweera.r@nsbm.ac.lk](mailto:ranaweera.r@nsbm.ac.lk)  
+- 📅 Submission Deadline: TBA  
+- 📌 Coursework Weight: 30% of final grade  
 
-- Collaborative development
-- Sharing knowledge and source code
-- Demonstrating our understanding of CGV concepts
+---
 
-## Team Members
+## 🔗 Repository URL
 
-- [Name 1](GitHubProfileLink)
-- [Name 2](GitHubProfileLink)
-- [Name 3](GitHubProfileLink)
-- [Name 1](GitHubProfileLink)
-- [Name 1](GitHubProfileLink)
+[https://github.com/malkamanuranga/CGV.git](https://github.com/malkamanuranga/CGV.git)
 
-## Technologies Used
+---
 
-- Python
-- 
-- 
-- 
+## 🎯 Project Objective
 
-## Getting Started
+Develop a **Rock-Paper-Scissors** game using Python that allows users to play using **real-time hand gestures**. The system captures the user's hand via webcam, processes the image, and classifies it into a gesture using basic image processing techniques. The computer will simultaneously respond with its own gesture, and the winner will be determined using traditional game rules.
 
-1. Clone the repository:
-   
-   https://github.com/malkamanuranga/CGV.git
+---
+
+## 👥 Team Members
+| Name | ID | Email                          |
+|------|----|---------------------------------|
+|      |    | ridma565@gmail.com              |
+|      |    | isurunayanajith50@gmail.com     |
+|      |    | chamathhasaranga199@gmail.com   |
+|      |    | chamojbandara0505@gmail.com     |
+|      |    | abcmalkamanuranga@gmail.com     |
+
+
+
+---
+
+## 💻 Technologies & Tools Used
+
+- Python 3.x
+- OpenCV
+- NumPy
+- Matplotlib
+- Image Processing Techniques:
+  - Grayscale conversion
+  - Thresholding
+  - Background subtraction
+  - Edge detection
+  - Contour analysis
+- Git & GitHub for version control
+
+---
+
+## 🧠 Features
+
+- Webcam-based gesture recognition
+- Background removal & real-time preprocessing
+- Display of image processing steps (grayscale, thresholding, etc.)
+- Game logic implementation with win/draw/lose outcomes
+- Optionally extended to "Rock, Paper, Scissors, Lizard, Spock"
+
+---
+
+## 📦 How to Run
+
+git clone https://github.com/malkamanuranga/CGV.git
+cd CGV
+python rps.py
