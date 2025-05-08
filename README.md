@@ -29,4 +29,4 @@ This project serves as a unified space for:
 
 1. Clone the repository:
    
-   git clone https://github.com/your-username/cgv-assignment.git
+   https://github.com/malkamanuranga/CGV.git
