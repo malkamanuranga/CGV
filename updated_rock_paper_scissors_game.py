@@ -138,5 +138,14 @@ if all(finger_up[f] for f in finger_up):
 # Reduce the frequency of hand landmark processing if necessary for performance
 if frame_counter % 5 == 0:
     result = hands.process(rgb_frame)
+    
+round_count = 0
 
+max_rounds = 5
+
+ 
+
+if round_count >= max_rounds:
+
+   cv2.putText(frame, "Game Over!", (200, 200), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 2)
 
