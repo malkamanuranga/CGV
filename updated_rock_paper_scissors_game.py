@@ -131,6 +131,9 @@ else:
     # Handle case where no hands are detected
     cv2.putText(frame, "No hand detected", (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 
+# More precise conditions for paper (all fingers extended)
+if all(finger_up[f] for f in finger_up):
+    return "paper"
 
 
 
