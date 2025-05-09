@@ -23,13 +23,14 @@ Develop a **Rock-Paper-Scissors** game using Python that allows users to play us
 ---
 
 ## 👥 Team Members
-| Name | ID | Email                          |
+| Name | ID | Github Email                    |
 |------|----|---------------------------------|
 |      |    | ridma565@gmail.com              |
 |      |    | isurunayanajith50@gmail.com     |
-|      |    | chamathhasaranga199@gmail.com   |
-|      |    | chamojbandara0505@gmail.com     |
 |      |    | abcmalkamanuranga@gmail.com     |
+|      |    | chamojbandara0505@gmail.com     |
+|      |    | chamathhasaranga199@gmail.com   | 
+|      |    | manuranaweera.r99@gmail.com     |    
 
 
 
@@ -64,5 +65,7 @@ Develop a **Rock-Paper-Scissors** game using Python that allows users to play us
 ## 📦 How to Run
 
 git clone https://github.com/malkamanuranga/CGV.git
+
 cd CGV
+
 python rps.py
