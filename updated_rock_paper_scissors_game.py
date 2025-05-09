@@ -7,6 +7,12 @@ mp_hands = mp.solutions.hands
 hands = mp_hands.Hands()
 mp_drawing = mp.solutions.drawing_utils
 
+# Store the previous states to only update when gestures change.
+previous_gesture = None
+previous_computer_gesture = None
+previous_result_text = None
+
+
 cap = cv2.VideoCapture(0)
 
 while True:
