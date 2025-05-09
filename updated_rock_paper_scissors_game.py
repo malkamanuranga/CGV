@@ -149,3 +149,6 @@ if round_count >= max_rounds:
 
    cv2.putText(frame, "Game Over!", (200, 200), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 2)
 
+if previous_result_text == "You win!":
+    # Add animation for winning (e.g., text flashing)
+    cv2.putText(frame, "You Win!", (100, 250), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 2)
