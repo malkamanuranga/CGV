@@ -67,4 +67,51 @@ def recognize_gesture(hand_landmarks):
     if finger_up['index'] and finger_up['middle'] and not finger_up['ring'] and not finger_up['pinky'] and not finger_up['thumb']:  # Scissors
         return "scissors"
     return None
+import random
+
+def play_game():
+    global previous_gesture, previous_computer_gesture, previous_result_text
+    cap = cv2.VideoCapture(0)
+
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+
+        frame = cv2.flip(frame, 1)
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        result = hands.process(rgb_frame)
+
+        if result.multi_hand_landmarks:
+            for landmarks in result.multi_hand_landmarks:
+                gesture = recognize_gesture(landmarks)
+
+                if gesture and gesture != previous_gesture:
+                    previous_gesture = gesture
+                    comp = random.choice(['rock', 'paper', 'scissors'])
+                    previous_computer_gesture = comp
+
+                    # Determine result
+                    if gesture == comp:
+                        previous_result_text = "It's a tie!"
+                    elif (gesture == 'rock' and comp == 'scissors') or \
+                         (gesture == 'scissors' and comp == 'paper') or \
+                         (gesture == 'paper' and comp == 'rock'):
+                        previous_result_text = "You win!"
+                    else:
+                        previous_result_text = "Computer wins!"
+        # Displaying text continuously
+        cv2.putText(frame, f'Your gesture: {previous_gesture or "Waiting..."}', (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        cv2.putText(frame, f'Computer: {previous_computer_gesture or "Waiting..."}', (10, 70),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+        cv2.putText(frame, f'Result: {previous_result_text or "Waiting..."}', (10, 110),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+
+        cv2.imshow("Rock Paper Scissors", frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
 
