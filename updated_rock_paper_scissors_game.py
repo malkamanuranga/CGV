@@ -115,3 +115,10 @@ def play_game():
     cap.release()
     cv2.destroyAllWindows()
 
+cv2.putText(frame, f'Your gesture: {previous_gesture or "Waiting..."}', (10, 30),
+            cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+cv2.putText(frame, f'Computer: {previous_computer_gesture or "Waiting..."}', (10, 70),
+            cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+cv2.putText(frame, f'Result: {previous_result_text or "Waiting..."}', (10, 110),
+            cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+
