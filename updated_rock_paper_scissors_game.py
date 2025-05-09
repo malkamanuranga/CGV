@@ -98,44 +98,5 @@ def play_game():
     cap.release()
     cv2.destroyAllWindows()
 
-cv2.putText(frame, f'Your gesture: {previous_gesture or "Waiting..."}', (10, 30),
-            cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-cv2.putText(frame, f'Computer: {previous_computer_gesture or "Waiting..."}', (10, 70),
-            cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-cv2.putText(frame, f'Result: {previous_result_text or "Waiting..."}', (10, 110),
-            cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
-
-mp_drawing.draw_landmarks(frame, landmarks, mp_hands.HAND_CONNECTIONS)
-
-if result.multi_hand_landmarks:
-    for landmarks in result.multi_hand_landmarks:
-        # Process landmarks if hands are detected
-else:
-    # Handle case where no hands are detected
-    cv2.putText(frame, "No hand detected", (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-
-# More precise conditions for paper (all fingers extended)
-if all(finger_up[f] for f in finger_up):
-    return "paper"
-
-# Reduce the frequency of hand landmark processing if necessary for performance
-if frame_counter % 5 == 0:
-    result = hands.process(rgb_frame)
-    
-round_count = 0
-
-max_rounds = 5
-
- 
-
-if round_count >= max_rounds:
-
-   cv2.putText(frame, "Game Over!", (200, 200), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 2)
-
-if previous_result_text == "You win!":
-    # Add animation for winning (e.g., text flashing)
-    cv2.putText(frame, "You Win!", (100, 250), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 2)
-
-# Test gesture recognition
-if gesture is None:
-    cv2.putText(frame, "Gesture not recognized", (100, 350), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+if __name__ == "__main__":
+    play_game()
