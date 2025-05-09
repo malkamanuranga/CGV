@@ -36,36 +36,4 @@ Develop a **Rock-Paper-Scissors** game using Python that allows users to play us
 
 ---
 
-## 💻 Technologies & Tools Used
 
-- Python 3.x
-- OpenCV
-- NumPy
-- Matplotlib
-- Image Processing Techniques:
-  - Grayscale conversion
-  - Thresholding
-  - Background subtraction
-  - Edge detection
-  - Contour analysis
-- Git & GitHub for version control
-
----
-
-## 🧠 Features
-
-- Webcam-based gesture recognition
-- Background removal & real-time preprocessing
-- Display of image processing steps (grayscale, thresholding, etc.)
-- Game logic implementation with win/draw/lose outcomes
-- Optionally extended to "Rock, Paper, Scissors, Lizard, Spock"
-
----
-
-## 📦 How to Run
-
-git clone https://github.com/malkamanuranga/CGV.git
-
-cd CGV
-
-python rps.py
