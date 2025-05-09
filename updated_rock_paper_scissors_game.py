@@ -122,3 +122,4 @@ cv2.putText(frame, f'Computer: {previous_computer_gesture or "Waiting..."}', (10
 cv2.putText(frame, f'Result: {previous_result_text or "Waiting..."}', (10, 110),
             cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
+mp_drawing.draw_landmarks(frame, landmarks, mp_hands.HAND_CONNECTIONS)
