@@ -1,13 +1,12 @@
-# Computer Graphics and Visualization (CS402.3) – Coursework 2025-2026
+# Computer Graphics and Visualization (CS402.3) – Coursework 2025
 
 ## Rock-Paper-Scissors Gesture Recognition Game
 
 This is a collaborative group project submitted as part of the coursework for **CS402.3 – Computer Graphics and Visualization**, conducted by **Dr. Rasika Ranaweera** at NSBM Green University. This repository contains the prototype and development files for a computer vision-based Rock-Paper-Scissors game with real-time gesture recognition.
 
 - 📧 Module Leader: [ranaweera.r@nsbm.ac.lk](mailto:ranaweera.r@nsbm.ac.lk)  
-- 📅 Submission Deadline: TBA  
-- 📌 Coursework Weight: 30% of final grade  
-
+- 📅 Submission Deadline: 10/09/2025
+- 
 ---
 
 ## 🔗 Repository URL
@@ -23,14 +22,15 @@ Develop a **Rock-Paper-Scissors** game using Python that allows users to play us
 ---
 
 ## 👥 Team Members
-| Name | ID | Github Email                    |
-|------|----|---------------------------------|
-|      |    | ridma565@gmail.com              |
-|      |    | isurunayanajith50@gmail.com     |
-|      |    | abcmalkamanuranga@gmail.com     |
-|      |    | chamojbandara0505@gmail.com     |
-|      |    | chamathhasaranga199@gmail.com   | 
-|      |    | manuranaweera.r99@gmail.com     |    
+
+| Name                   | ID     | GitHub Email                      |
+|------------------------|--------|-----------------------------------|
+| M.L.R. Navod           | 22979  | ridma565@gmail.com                |
+| A.A.I.N. Abeysinghe    | 22829  | isurunayanajith50@gmail.com       |
+| B.M. Manuranga         | 19277  | abcmalkamanuranga@gmail.com       |
+| P.M.C.S. Bandara       | 22834  | chamojbandara0505@gmail.com       |
+| S.P.C.H. Sandagiri     | 22886  | chamathhasaranga199@gmail.com     |
+| R.M.H. Rangana         | 22872  | manuranaweera.r99@gmail.com       |
 
 
 
