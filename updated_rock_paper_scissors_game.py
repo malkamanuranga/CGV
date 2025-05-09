@@ -1,5 +1,6 @@
 import cv2
 import mediapipe as mp
+import random
 
 # Initialize MediaPipe Hands.
 mp_hands = mp.solutions.hands
