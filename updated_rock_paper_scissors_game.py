@@ -152,3 +152,7 @@ if round_count >= max_rounds:
 if previous_result_text == "You win!":
     # Add animation for winning (e.g., text flashing)
     cv2.putText(frame, "You Win!", (100, 250), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 2)
+
+# Test gesture recognition
+if gesture is None:
+    cv2.putText(frame, "Gesture not recognized", (100, 350), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
