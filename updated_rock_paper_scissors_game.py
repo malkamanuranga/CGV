@@ -12,30 +12,6 @@ previous_gesture = None
 previous_computer_gesture = None
 previous_result_text = None
 
-
-cap = cv2.VideoCapture(0)
-
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-
-    frame = cv2.flip(frame, 1)
-    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    result = hands.process(rgb_frame)
-
-    if result.multi_hand_landmarks:
-        for landmarks in result.multi_hand_landmarks:
-            mp_drawing.draw_landmarks(frame, landmarks, mp_hands.HAND_CONNECTIONS)
-
-    cv2.imshow("Rock Paper Scissors", frame)
-
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-
 def recognize_gesture(hand_landmarks):
     # Finger tip and pip landmarks
     tips = {
@@ -91,6 +67,7 @@ def play_game():
 
         if result.multi_hand_landmarks:
             for landmarks in result.multi_hand_landmarks:
+                mp_drawing.draw_landmarks(frame, landmarks, mp_hands.HAND_CONNECTIONS)
                 gesture = recognize_gesture(landmarks)
 
                 if gesture and gesture != previous_gesture:
@@ -101,13 +78,12 @@ def play_game():
                     # Determine result
                     if gesture == comp:
                         previous_result_text = "It's a tie!"
-                    elif (gesture == 'rock' and comp == 'scissors') or \
-                         (gesture == 'scissors' and comp == 'paper') or \
-                         (gesture == 'paper' and comp == 'rock'):
+                    elif (gesture == 'rock' and comp == 'scissors') or  (gesture == 'scissors' and comp == 'paper') or  (gesture == 'paper' and comp == 'rock'):
                         previous_result_text = "You win!"
                     else:
                         previous_result_text = "Computer wins!"
-        # Displaying text continuously
+        
+        # Always display last known gestures and result
         cv2.putText(frame, f'Your gesture: {previous_gesture or "Waiting..."}', (10, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
         cv2.putText(frame, f'Computer: {previous_computer_gesture or "Waiting..."}', (10, 70),
