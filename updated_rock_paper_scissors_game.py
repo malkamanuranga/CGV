@@ -135,5 +135,8 @@ else:
 if all(finger_up[f] for f in finger_up):
     return "paper"
 
+# Reduce the frequency of hand landmark processing if necessary for performance
+if frame_counter % 5 == 0:
+    result = hands.process(rgb_frame)
 
 
